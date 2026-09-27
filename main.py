@@ -24,6 +24,26 @@ def create_order(e):
 def display_char(e):
     document.getElementById("output2").innerHTML = ""
 
-    get_word = document.getElementById("word").value
+# Clears the div content 
+    category_var = document.getElementById("category").value
+    product_var = document.getElementById("product").value
+    stockqty_var = document.getElementById("50").value
+ 
+ #Create the SKU variable using 
+ #SKU_name_here = category_variable[:3].upper() + "-" + product_name_variable[:4].upper() + "-" + str(stock_qty)
+    CuppaM_SKU = category_var[:4].upper() + "-" + product_var[:3].upper() + "-" + str(stockqty_var)
 
-    display(get_word[:3], target="output2") # Get the first 3 letters of the word
+#Display the SKU
+ #display("SKU: ", SKU_name_here, target='div_id_here')
+
+
+# Program Flow
+#Get Category ↓
+#Take first 3 letters ↓
+#Make uppercase ↓
+#Get Product Name ↓
+#Take first 4 letters ↓
+#Make uppercase ↓
+#Add Quantity ↓
+#Combine with "-" ↓
+#Display SKU
