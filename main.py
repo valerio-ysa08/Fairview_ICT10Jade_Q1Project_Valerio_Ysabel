@@ -29,12 +29,12 @@ def display_char(e):
     # Clear previous output
     document.getElementById("output2").innerHTML = "" 
 
-    # Get values using the correct HTML element IDs
+    # Varibles for the category, product, and stock quantity
     category_var = document.getElementById("category").value
     product_var = document.getElementById("product").value
     stockqty_var = document.getElementById("stock_qty").value
  
-    # Check if fields are selected/filled out to prevent errors
+    # Checks if fields are selected/filled out to prevent errors
     if not category_var and not product_var:
         document.getElementById("output2").innerHTML = "Please select a drink or product!"
         return
