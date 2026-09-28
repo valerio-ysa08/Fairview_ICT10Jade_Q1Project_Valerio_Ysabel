@@ -67,30 +67,30 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
-      .container {
-        margin-top: 50px;
-        padding-top: 20px;
-        padding-bottom: 10px;
-        border-radius: 10px;
-        justify-content: center;
-        align-items: center;
-        background: #b6d4aa;
-        box-shadow: 0 6px 18px rgba(182, 208, 148, 0.812);
-        font-family: Alata;
-      }
+        .container {
+            margin-top: 50px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            background: #b6d4aa;
+            box-shadow: 0 6px 18px rgba(182, 208, 148, 0.812);
+            font-family: Alata;
+        }
 
-      #btn {
-			background-color: #dfaeae;
-			font-family: 'Alata', sans-serif;
-			align-items: center;
-			justify-content: center;  
-		}
+         #btn {
+            background-color: #dfaeae;
+            font-family: 'Alata', sans-serif;
+            align-items: center;
+            justify-content: center;  
+		     }
 
     </style>
 </head>
 <nav class="navbar navbar-expand-lg" id="main-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="home.html">
+            <a class="navbar-brand" href="index.html">
                 <img src="Q1Proj_Logo.png" alt="Logo" class="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,7 +99,7 @@
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto ms-3">
                     <li class="nav-item">
-                        <a class="nav-link fs-5" href="index.html">Receipt Generator</a>
+                        <a class="nav-link fs-5" href="page1.html">Receipt Generator</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-5" href="page2.html">SKU Generator</a>
@@ -108,15 +108,54 @@
             </div>
         </div>
     </nav>
-<body>
-    <h1>✨ Cuppa Matcha - THE Matcha Bar ✨</h1>
+
+<h1>✨ Cuppa Matcha - THE Menu ✨</h1>
     <br>
     <div class="container text-center">
-    <div id="welcome"></div>
-    <a class="img-fluid" href="#"><img src="Q1Proj_TransparentLogo.png" alt="" style="width: 250px; height: 250px;"></a>
+    <div id="menu"></div>
+    <form>
+        <label for="choose_drink">DRINK MENU:</button>
+        <br>
+        <input type="checkbox" id="item1" value="130">
+        <label for="item1">Klasik Matcha Latte - ₱130</label>
+        <br>
+        <input type="checkbox" id="item2" value="130">
+        <label for="item2">Strawberry Matcha Latte - ₱130</label>
+        <br>
+        <input type="checkbox" id="item3" value="130">
+        <label for="item3">Ube Matcha Latte - ₱130</label>
+        <br>
+        <input type="checkbox" id="item4" value="130">
+        <label for="item4">Choco Champorado Matcha - ₱130</label>
+        <br>
+        <br>
+
+        <label for="choose_add">ADD-ON MENU:</button>
+        <br>
+        <input type="checkbox" id="item5" value="40">
+        <label for="item5">Oatmilk - ₱40</label>
+        <br>
+        <input type="checkbox" id="item6" value="30">
+        <label for="item6">Extra Ube Jam - ₱30</label>
+        <br>
+        <input type="checkbox" id="item7" value="30">
+        <label for="item7">Extra Strawberry Bits - ₱30</label>
+        <br>
+        <input type="checkbox" id="item8" value="20">
+        <label for="item8">Extra Choco Drizzle - ₱20</label>
+        <br>
+        <br>
+        <button type="button" py-click="create_order" id="btn">Create Order</button>
+        <br><br>
+
+        <label for="choose">======= YOUR RECEIPT =======</button>
+        <br>
+    </form>
+
+    <div id="output1"></div>
+    <script type = "py" src = "main.py"></script>
     <br>
-    <br>
-    <p>Welcome to CUPPA MATCHA, where fun-filled drinks infuse the delectable flavors of the Philippines with the iconic taste of matcha.</p>
-    <p>See our Menu and SKU while your here!</p>
+<body>
+    
 </body>
 </html>
