@@ -22,28 +22,25 @@ def create_order(e):
     Enjoy! =]'''
 
 def display_char(e):
-    document.getElementById("output2").innerHTML = ""
+    # Clear previous output
+    document.getElementById("output2").innerHTML = "" 
 
-# Clears the div content 
+    # Get values using the correct HTML element IDs
     category_var = document.getElementById("category").value
     product_var = document.getElementById("product").value
-    stockqty_var = document.getElementById("50").value
+    stockqty_var = document.getElementById("stock_qty").value
  
- #Create the SKU variable using 
- #SKU_name_here = category_variable[:3].upper() + "-" + product_name_variable[:4].upper() + "-" + str(stock_qty)
-    CuppaM_SKU = category_var[:4].upper() + "-" + product_var[:3].upper() + "-" + str(stockqty_var)
+    # Check if fields are selected/filled out to prevent errors
+    if not category_var and not product_var:
+        document.getElementById("output2").innerHTML = "Please select a drink or product!"
+        return
 
-#Display the SKU
- #display("SKU: ", SKU_name_here, target='div_id_here')
+    # Use whichever one has a value selected
+    chosen_item = category_var if category_var else product_var
+    prefix_source = category_var if category_var else product_var
 
+    # Build the SKU variable
+    cuppa_m_sku = f"{category_var[:4].upper()}-{product_var[:3].upper()}-{stockqty_var}"
 
-# Program Flow
-#Get Category ↓
-#Take first 3 letters ↓
-#Make uppercase ↓
-#Get Product Name ↓
-#Take first 4 letters ↓
-#Make uppercase ↓
-#Add Quantity ↓
-#Combine with "-" ↓
-#Display SKU
+    # Display the SKU in the HTML output div
+    document.getElementById("output2").innerHTML = f"SKU: {cuppa_m_sku}"
