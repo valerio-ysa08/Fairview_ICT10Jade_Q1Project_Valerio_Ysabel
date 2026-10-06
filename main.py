@@ -27,7 +27,7 @@ def create_order(e):
 
 def display_char(e):
     # Clear previous output
-    document.getElementById("output2").innerHTML = "" 
+    document.getElementById("output2").innerHTML = "" # Clears previous result 
 
     # Varibles for the category, product, and stock quantity
     category_var = document.getElementById("category").value
